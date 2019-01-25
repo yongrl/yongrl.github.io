@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="pandas,join,">
+  <meta name="keywords" content="yongrl, 雍若兰">
 
 
 
@@ -79,18 +79,19 @@
 
 
 
-<meta name="description" content="问题在分析数据时，遇到了要处理多个dataframe按照关键词user_id连接的需求，在sql中只要多个表left join on 就可以了，那么在pandas中怎么处理呢？ DataFrame中的表连接方式dataframe主要有三个函数可以用来做表的连接，分别是join、merge、concat，下面分别介绍这三个DataFrame的用法。 join1DataFrame.join(other">
-<meta name="keywords" content="pandas,join">
+<meta name="description" content="SnowNLP是一个python写的类库，可以方便的处理中文文本内容，TextBlob的启发而写的，由于现在大部分的自然语言处理库基本都是针对英文的，于是写了一个方便处理中文的类库并且和TextBlob不同的是，这里没有用NLTK（Nature Language Toolkit），所有的算法都是自己实现的，并且自带了一些训练好的字典。注意本程序都是处理的unicode编码，所以使用时请自行deco">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pandas之dataframe的连接">
-<meta property="og:url" content="https://yongrl.github.io/2019/01/26/pandas之dataframe的连接/index.html">
+<meta property="og:title" content="snowNLP">
+<meta property="og:url" content="https://yongrl.github.io/2019/01/26/snowNLP/index.html">
 <meta property="og:site_name" content="yongrl">
-<meta property="og:description" content="问题在分析数据时，遇到了要处理多个dataframe按照关键词user_id连接的需求，在sql中只要多个表left join on 就可以了，那么在pandas中怎么处理呢？ DataFrame中的表连接方式dataframe主要有三个函数可以用来做表的连接，分别是join、merge、concat，下面分别介绍这三个DataFrame的用法。 join1DataFrame.join(other">
+<meta property="og:description" content="SnowNLP是一个python写的类库，可以方便的处理中文文本内容，TextBlob的启发而写的，由于现在大部分的自然语言处理库基本都是针对英文的，于是写了一个方便处理中文的类库并且和TextBlob不同的是，这里没有用NLTK（Nature Language Toolkit），所有的算法都是自己实现的，并且自带了一些训练好的字典。注意本程序都是处理的unicode编码，所以使用时请自行deco">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-25T16:33:33.348Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/YongRuolan/MdPic/master/blog/charaBasedSegData.png">
+<meta property="og:updated_time" content="2019-01-25T16:41:58.785Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pandas之dataframe的连接">
-<meta name="twitter:description" content="问题在分析数据时，遇到了要处理多个dataframe按照关键词user_id连接的需求，在sql中只要多个表left join on 就可以了，那么在pandas中怎么处理呢？ DataFrame中的表连接方式dataframe主要有三个函数可以用来做表的连接，分别是join、merge、concat，下面分别介绍这三个DataFrame的用法。 join1DataFrame.join(other">
+<meta name="twitter:title" content="snowNLP">
+<meta name="twitter:description" content="SnowNLP是一个python写的类库，可以方便的处理中文文本内容，TextBlob的启发而写的，由于现在大部分的自然语言处理库基本都是针对英文的，于是写了一个方便处理中文的类库并且和TextBlob不同的是，这里没有用NLTK（Nature Language Toolkit），所有的算法都是自己实现的，并且自带了一些训练好的字典。注意本程序都是处理的unicode编码，所以使用时请自行deco">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/YongRuolan/MdPic/master/blog/charaBasedSegData.png">
 
 
 
@@ -120,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="https://yongrl.github.io/2019/01/26/pandas之dataframe的连接/">
+  <link rel="canonical" href="https://yongrl.github.io/2019/01/26/snowNLP/">
 
 
 
 
 
-  <title>pandas之dataframe的连接 | yongrl</title>
+  <title>snowNLP | yongrl</title>
   
 
 
@@ -283,7 +284,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yongrl.github.io/2019/01/26/pandas之dataframe的连接/">
+    <link itemprop="mainEntityOfPage" href="https://yongrl.github.io/2019/01/26/snowNLP/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="yongrl">
@@ -300,7 +301,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">pandas之dataframe的连接</h2>
+          <h2 class="post-title" itemprop="name headline">snowNLP</h2>
         
 
         <div class="post-meta">
@@ -312,7 +313,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-26T00:13:30+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-26T00:40:29+08:00">
                 2019-01-26
               </time>
             
@@ -335,8 +336,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python编程/" itemprop="url" rel="index">
-                    <span itemprop="name">python编程</span>
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
                   </a>
                 </span>
 
@@ -403,55 +404,31 @@
       
 
       
-        <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在分析数据时，遇到了要处理多个dataframe按照关键词user_id连接的需求，在sql中只要多个表left join on 就可以了，那么在pandas中怎么处理呢？</p>
-<h1 id="DataFrame中的表连接方式"><a href="#DataFrame中的表连接方式" class="headerlink" title="DataFrame中的表连接方式"></a>DataFrame中的表连接方式</h1><p>dataframe主要有三个函数可以用来做表的连接，分别是join、merge、concat，下面分别介绍这三个DataFrame的用法。</p>
-<h2 id="join"><a href="#join" class="headerlink" title="join"></a>join</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataFrame.join(other, on=None, how=&apos;left&apos;, lsuffix=&apos;&apos;, rsuffix=&apos;&apos;, sort=False)</span><br></pre></td></tr></table></figure>
-<p>通过列或者索引join “other” dataframe, 能高效的连接多个dataframe。</p>
-<p>参数：</p>
+        <p>SnowNLP是一个python写的类库，可以方便的处理中文文本内容，<a href="https://github.com/sloria/TextBlob" target="_blank" rel="noopener">TextBlob</a>的启发而写的，<br>由于现在大部分的自然语言处理库基本都是针对英文的，于是写了一个方便处理中文的类库<br>并且和TextBlob不同的是，这里没有用NLTK（Nature Language Toolkit），所有的算法都是自己实现的，并且自带了一些训练好的字典。<br>注意本程序都是处理的unicode编码，所以使用时请自行decode成unicode(python 2)。</p>
+<h2 id="下载资源："><a href="#下载资源：" class="headerlink" title="下载资源："></a>下载资源：</h2><p><a href="https://pypi.org/project/snownlp/" target="_blank" rel="noopener">python包</a></p>
+<p><a href="https://github.com/isnowfy/snownlp" target="_blank" rel="noopener">github</a></p>
+<h2 id="功能模块："><a href="#功能模块：" class="headerlink" title="功能模块："></a>功能模块：</h2><h3 id="分类器："><a href="#分类器：" class="headerlink" title="分类器："></a>分类器：</h3><p>模型：贝叶斯分类器</p>
+<p>相关源码文件：classification</p>
+<h3 id="拼音，繁体字和简体字之间的转换"><a href="#拼音，繁体字和简体字之间的转换" class="headerlink" title="拼音，繁体字和简体字之间的转换"></a>拼音，繁体字和简体字之间的转换</h3><p>实现方法: Trie数实现最大匹配，<br><a href="https://blog.csdn.net/gao1440156051/article/details/51357135" target="_blank" rel="noopener">Trie树学习博客</a></p>
+<p>提供的字典：</p>
 <ul>
-<li>other：一个dataframe，或者是dataframe的list</li>
-<li>on：列或索引名，或者是连接关键词的list</li>
-<li>how：连接方式,可选{‘left’,’right’, ‘outer’, ‘inner’}, 默认值: ‘left’</li>
-<li>lsuffix：左表交叉列的别名</li>
-<li>rsuffix：右表交叉列的别名</li>
-<li>sort：布尔值，是否按照连接关键词排序，默认为False</li>
+<li>拼音：56081</li>
+<li>停用词：1426</li>
+<li>繁体字：3215</li>
 </ul>
-<p>注意：多表连接只能通过索引，否则会报错</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---------------------------------------------------------------------------</span><br><span class="line">ValueError                                Traceback (most recent call last)</span><br><span class="line">&lt;ipython-input<span class="number">-35</span><span class="number">-29</span>a230cbe380&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">----&gt; 1 oned_beh_UserCou.join([threed_beh_UserCou.reset_index(),sixd_beh_UserCou.reset_index],how='left',on='user_id')</span><br><span class="line"></span><br><span class="line">/usr/local/lib/python3<span class="number">.5</span>/dist-packages/pandas/core/frame.py <span class="keyword">in</span> join(self, other, on, how, lsuffix, rsuffix, sort)</span><br><span class="line">   <span class="number">5291</span>         <span class="comment"># For SparseDataFrame's benefit</span></span><br><span class="line">   <span class="number">5292</span>         <span class="keyword">return</span> self._join_compat(other, on=on, how=how, lsuffix=lsuffix,</span><br><span class="line">-&gt; 5293                                  rsuffix=rsuffix, sort=sort)</span><br><span class="line">   <span class="number">5294</span> </span><br><span class="line">   <span class="number">5295</span>     <span class="function"><span class="keyword">def</span> <span class="title">_join_compat</span><span class="params">(self, other, on=None, how=<span class="string">'left'</span>, lsuffix=<span class="string">''</span>, rsuffix=<span class="string">''</span>,</span></span></span><br><span class="line"><span class="function"><span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">/usr/local/lib/python3<span class="number">.5</span>/dist-packages/pandas/core/frame.py in _join_compat<span class="params">(self, other, on, how, lsuffix, rsuffix, sort)</span></span></span></span><br><span class="line"><span class="function"><span class="params">   <span class="number">5309</span>         else:</span></span></span><br><span class="line"><span class="function"><span class="params">   <span class="number">5310</span>             if on is not None:</span></span></span><br><span class="line"><span class="function"><span class="params">-&gt; <span class="number">5311</span>                 raise ValueError<span class="params">(<span class="string">'Joining multiple DataFrames only supported'</span></span></span></span></span><br><span class="line"><span class="function"><span class="params"><span class="params">   <span class="number">5312</span>                                  <span class="string">' for joining on index'</span>)</span></span></span></span><br><span class="line"><span class="function"><span class="params">   <span class="number">5313</span> </span></span></span><br><span class="line"><span class="function"><span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">ValueError: Joining multiple DataFrames only supported for joining on index</span></span></span><br></pre></td></tr></table></figure>
-<p>但是当对dataframe进行groupby、reset_index等操作后，此时的index可能并不是我们想要的索引列。可以通过以下函数来重置index：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pandas.DataFrame.reset_index()</span><br><span class="line">pandas.DataFrame.set_index(&quot;&quot;,drop=True)</span><br><span class="line">pandas.Series.reset_index()</span><br></pre></td></tr></table></figure></p>
-<h2 id="merge"><a href="#merge" class="headerlink" title="merge"></a>merge</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataFrame.merge(right, how=&apos;inner&apos;, on=None, left_on=None, right_on=None, left_index=False, right_index=False, sort=False, suffixes=(&apos;_x&apos;, &apos;_y&apos;), copy=True, indicator=False, validate=None)[source]</span><br></pre></td></tr></table></figure>
-<p>merge类似于数据库中的join操作（database-style join），如果两表连接的字段是column,dataframe的index会被省略，如果是索引和索引或者索引和column的链接,最后仍会保留index</p>
-<p>参数</p>
+<h3 id="分词和词性标注"><a href="#分词和词性标注" class="headerlink" title="分词和词性标注"></a>分词和词性标注</h3><p>模型：</p>
 <ul>
-<li>right:连接的另一个dataframe</li>
-<li>how: 连接方式,可选{‘left’,’right’, ‘outer’, ‘inner’}, 默认值: ‘inner’</li>
-<li>on: 表的连接字段，column name 或者index name,这个字段必须出现在连接的两个dataframe中，如果该参数值为None,并且不是按照index连接，则表的连接字段为两个dataframe的公共字段</li>
-<li>left_on: 左dataframe的连接column或index名，list或者array-like</li>
-<li>right_on: 右dataframe的连接column或index名，list或者array-like</li>
-<li>left_index: 布尔值，默认为False,使用左dataframe的index作为join的字段</li>
-<li>right_index: 同left_index</li>
-<li>sort: 布尔值，默认False,是否按键值排序</li>
-<li>suffixes: 2-length sequence,公共字段别名</li>
-<li>copy: 布尔值，默认True</li>
-<li>indicator: 布尔或者字符串</li>
-<li>validate: 字符串，默认None，检验merge是否为以下形式:”one_to_one”,”one_to_many”,”many_to_one”,”many_to_many”</li>
+<li>CharacterBasedGenerativeModel<br>参考文献：<a href="http://aclweb.org/anthology//Y/Y09/Y09-2047.pdf" target="_blank" rel="noopener">Which is More Suitable for Chinese Word Segmentation,the Generative Model or the Discriminative One?</a></li>
+<li>TnT<br>参考文献： <a href="http://www.coli.uni-saarland.de/publikationen/softcopies/Brants:2000:TSP.pdf" target="_blank" rel="noopener">tnt a statistical part-of-speech tagger</a></li>
 </ul>
-<h2 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pandas.concat(objs, axis=0, join=&apos;outer&apos;, join_axes=None, ignore_index=False, keys=None, levels=None, names=None, verify_integrity=False, sort=None, copy=True)</span><br></pre></td></tr></table></figure>
-<p>按某一维度拼接pandas对象</p>
-<p>参数：</p>
-<ul>
-<li>objs:</li>
-<li>axis: {0,1},默认为0</li>
-<li>join: {‘inner’,’outer’},默认为outer,这个参数的意思是如果按行连接，列的处理方式，inner则只保留公共列，outer则列出所有列</li>
-<li>join_axes: </li>
-<li>ignore_index: 布尔值，默认为False,</li>
-<li>key: sequence,默认None</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">df1 = pd.DataFrame([[&apos;a&apos;, 1], [&apos;b&apos;, 2]],columns=[&apos;letter&apos;, &apos;number&apos;])</span><br><span class="line">df3 = pd.DataFrame([[&apos;c&apos;, 3, &apos;cat&apos;], [&apos;d&apos;, 4, &apos;dog&apos;]], columns=[&apos;letter&apos;, &apos;number&apos;, &apos;animal&apos;])</span><br><span class="line">pd.concat([df1, df3], join=&quot;inner&quot;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">letter	number</span><br><span class="line">0	a	1</span><br><span class="line">1	b	2</span><br><span class="line">0	c	3</span><br><span class="line">1	d	4</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pd.concat([df1, df3], join=&quot;outer&quot;,ignore_index=True)</span><br><span class="line">animal	letter	number</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">0	NaN	a	1</span><br><span class="line">1	NaN	b	2</span><br><span class="line">2	cat	c	3</span><br><span class="line">3	dog	d	4</span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>merge与join相比，join可以一次进行多个dataframe的连接，而merge一次只能进行两个dataframe, 但merge在连接字段的设置上更灵活，而concat只是进行dataframe的行或列的拼接。</p>
+<p>训练数据：19484 条短文本,偏向于细粒度<br><img src="https://raw.githubusercontent.com/YongRuolan/MdPic/master/blog/charaBasedSegData.png" alt="image"></p>
+<p>s:single begin       b:begin    e:end      m:middle</p>
+<h3 id="sentiment"><a href="#sentiment" class="headerlink" title="sentiment:"></a>sentiment:</h3><p>使用的模型：贝叶斯</p>
+<p>训练数据: 电脑评论</p>
+<p>neg:18576</p>
+<p>pos: 16548</p>
+<h3 id="提取文本关键词，提取摘要"><a href="#提取文本关键词，提取摘要" class="headerlink" title="提取文本关键词，提取摘要"></a>提取文本关键词，提取摘要</h3><p>sim:<br>文本相关性：BM25<br><a href="http://note.youdao.com/noteshare?id=4ac8f9bdcbb457886cc522a3881c3708&amp;sub=546E9F03A3454A0A89D7F30E21A09E22" target="_blank" rel="noopener">BM25的简单理解</a></p>
+<p>textRank<br>paper：<a href="http://www.aclweb.org/anthology/W04-3252" target="_blank" rel="noopener">TextRank: Bringing Order into Texts</a><br><a href="http://note.youdao.com/noteshare?id=da4e81a0025523c1c8ac39a090580b70&amp;sub=177AD3BA62A3461FA11068C2A95CEB8C" target="_blank" rel="noopener">论文总结和代码实现</a></p>
 
       
     </div>
@@ -467,14 +444,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/pandas/" rel="tag"># pandas</a>
-          
-            <a href="/tags/join/" rel="tag"># join</a>
-          
-        </div>
-      
 
       
       
@@ -484,14 +453,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/01/26/使用jekyll在github上搭建博客/" rel="next" title="使用jekyll在github上搭建博客">
+                <i class="fa fa-chevron-left"></i> 使用jekyll在github上搭建博客
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/26/使用jekyll在github上搭建博客/" rel="prev" title="使用jekyll在github上搭建博客">
-                使用jekyll在github上搭建博客 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/01/26/监督学习中的关键要素/" rel="prev" title="监督学习中的关键要素">
+                监督学习中的关键要素 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -642,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DataFrame中的表连接方式"><span class="nav-number">2.</span> <span class="nav-text">DataFrame中的表连接方式</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#join"><span class="nav-number">2.1.</span> <span class="nav-text">join</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#merge"><span class="nav-number">2.2.</span> <span class="nav-text">merge</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#concat"><span class="nav-number">2.3.</span> <span class="nav-text">concat</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载资源："><span class="nav-number">1.</span> <span class="nav-text">下载资源：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#功能模块："><span class="nav-number">2.</span> <span class="nav-text">功能模块：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分类器："><span class="nav-number">2.1.</span> <span class="nav-text">分类器：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拼音，繁体字和简体字之间的转换"><span class="nav-number">2.2.</span> <span class="nav-text">拼音，繁体字和简体字之间的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分词和词性标注"><span class="nav-number">2.3.</span> <span class="nav-text">分词和词性标注</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sentiment"><span class="nav-number">2.4.</span> <span class="nav-text">sentiment:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提取文本关键词，提取摘要"><span class="nav-number">2.5.</span> <span class="nav-text">提取文本关键词，提取摘要</span></a></li></ol></li></ol></div>
             
 
           </div>

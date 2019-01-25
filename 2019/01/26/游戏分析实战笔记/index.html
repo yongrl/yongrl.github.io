@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="游戏分析,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="数据分析的价值不应该只是发现数据中的“经验和常识”，而应当掌握数据探索方法，发现数据潜在的价值，既要遇见“坏的未来”，也要遇见“好的未来”，规避风险的同时抓住机遇，真正体现数据分析工作的价值。 游戏行业：  提供整体运营情况、设立预警指标、定位指标异动原因、同行企业产品对比、发现战略商机、了解同行发展状态、发现市场热点 评估产品质量、帮助产品定位 ==对高价值用户进行画像==，分析其行为和偏好、制">
+<meta name="keywords" content="游戏分析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="游戏分析实战笔记">
+<meta property="og:url" content="https://yongrl.github.io/2019/01/26/游戏分析实战笔记/index.html">
+<meta property="og:site_name" content="yongrl">
+<meta property="og:description" content="数据分析的价值不应该只是发现数据中的“经验和常识”，而应当掌握数据探索方法，发现数据潜在的价值，既要遇见“坏的未来”，也要遇见“好的未来”，规避风险的同时抓住机遇，真正体现数据分析工作的价值。 游戏行业：  提供整体运营情况、设立预警指标、定位指标异动原因、同行企业产品对比、发现战略商机、了解同行发展状态、发现市场热点 评估产品质量、帮助产品定位 ==对高价值用户进行画像==，分析其行为和偏好、制">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://raw.githubusercontent.com/YongRuolan/MdPic/master/blog/%E6%B8%B8%E6%88%8F%E8%A1%8C%E4%B8%BA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9B%BE.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/YongRuolan/MdPic/master/blog/%E8%BD%AC%E5%8C%96%E7%8E%87%E6%BC%8F%E6%96%97%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/YongRuolan/MdPic/master/blog/%E5%8A%A0%E6%9D%83%E7%95%99%E5%AD%98%E7%8E%87.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/YongRuolan/MdPic/master/blog/%E6%B8%B8%E6%88%8F%E5%B0%81%E6%B5%8B%E6%9C%9F%E6%AF%8F%E6%97%A5%E6%B5%8B%E8%AF%95%E7%9B%AE%E7%9A%84%E5%88%87%E5%88%86.jpg">
+<meta property="og:updated_time" content="2019-01-25T16:47:24.916Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="游戏分析实战笔记">
+<meta name="twitter:description" content="数据分析的价值不应该只是发现数据中的“经验和常识”，而应当掌握数据探索方法，发现数据潜在的价值，既要遇见“坏的未来”，也要遇见“好的未来”，规避风险的同时抓住机遇，真正体现数据分析工作的价值。 游戏行业：  提供整体运营情况、设立预警指标、定位指标异动原因、同行企业产品对比、发现战略商机、了解同行发展状态、发现市场热点 评估产品质量、帮助产品定位 ==对高价值用户进行画像==，分析其行为和偏好、制">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/YongRuolan/MdPic/master/blog/%E6%B8%B8%E6%88%8F%E8%A1%8C%E4%B8%BA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9B%BE.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":true,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://yongrl.github.io/2019/01/26/游戏分析实战笔记/">
+
+
+
+
+
+  <title>游戏分析实战笔记 | yongrl</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">yongrl</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description"></h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            Books
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-movies">
+          <a href="/movies" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            Movies
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yongrl.github.io/2019/01/26/游戏分析实战笔记/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yongrl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yongrl">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">游戏分析实战笔记</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-26T00:45:30+08:00">
+                2019-01-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据分析/" itemprop="url" rel="index">
+                    <span itemprop="name">数据分析</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="数据分析的价值"><a href="#数据分析的价值" class="headerlink" title="数据分析的价值"></a>数据分析的价值</h2><p>不应该只是发现数据中的“经验和常识”，而应当掌握数据探索方法，发现数据潜在的价值，既要遇见“坏的未来”，也要遇见“好的未来”，规避风险的同时抓住机遇，真正体现数据分析工作的价值。</p>
+<p>游戏行业：</p>
+<ul>
+<li>提供整体运营情况、设立预警指标、定位指标异动原因、同行企业产品对比、发现战略商机、了解同行发展状态、发现市场热点</li>
+<li>评估产品质量、帮助产品定位</li>
+<li>==对高价值用户进行画像==，分析其行为和偏好、制定营销策略；用户流失预警</li>
+<li>分析流失原因、特征，提出版本修正建议</li>
+<li>==文本挖掘、分析用户反馈和舆情分析==</li>
+<li>监控各位置的转化效率、价值、进行资源位合理安排和定价</li>
+<li>帮助开发人员发现问题</li>
+</ul>
+<h2 id="数据分析概述"><a href="#数据分析概述" class="headerlink" title="数据分析概述"></a>数据分析概述</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>根据“业务理解”，采用“适当的统计方法”对收集的数据进行清洗，提取有用的信息和规律，以简明易懂的方式“呈现”给使用人员，发挥数据的作用。</p>
+<h3 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h3><ul>
+<li>明确需求：目的、分析范围、分析时间、分析内容</li>
+<li>数据收集：<ul>
+<li>企业内部数据：游戏行为数据和问卷调查数据</li>
+<li>企业外部数据：做舆情监控，竞品分析时，需要从其他渠道收集数据。</li>
+</ul>
+</li>
+<li>数据分析</li>
+<li>数据展示</li>
+<li><p>报告撰写：主要采用总分总结构</p>
+<ul>
+<li>标题</li>
+<li>导语：目的、对象、范围、经过、收获、基本经验等，有侧重点</li>
+<li>结论：提供建议进行预测（放在详细分析前面）</li>
+<li><p>详细分析：</p>
+<p>分析报告要层次分明、架构清晰、结论明确、图表化、逻辑性强、对业务了解、不要回避“不良结论”</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="常用数据分析方法："><a href="#常用数据分析方法：" class="headerlink" title="常用数据分析方法："></a>常用数据分析方法：</h3><ul>
+<li>对比分析</li>
+<li>分组分析</li>
+<li>结构分析</li>
+<li>平均分析</li>
+<li>交叉分析</li>
+<li>漏斗分析</li>
+<li>矩阵分析</li>
+<li>综合评价分析</li>
+<li>5W1H：六何分析</li>
+<li>相关分析</li>
+<li>回归分析</li>
+<li>聚类分析</li>
+<li>判别分析</li>
+<li>主成分分析</li>
+<li>因子分析</li>
+<li>时间序列分析</li>
+<li>方差分析</li>
+</ul>
+<h3 id="游戏业务相关数据"><a href="#游戏业务相关数据" class="headerlink" title="游戏业务相关数据"></a>游戏业务相关数据</h3><p><img src="https://raw.githubusercontent.com/YongRuolan/MdPic/master/blog/%E6%B8%B8%E6%88%8F%E8%A1%8C%E4%B8%BA%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9B%BE.jpg" alt="image"></p>
+<h2 id="游戏关键数据指标"><a href="#游戏关键数据指标" class="headerlink" title="游戏关键数据指标"></a>游戏关键数据指标</h2><h3 id="转化率"><a href="#转化率" class="headerlink" title="转化率"></a>转化率</h3><p>在手游数据分析中，==需要关注玩家点击广告到进入游戏后付费的每一步转化==，相对于端游，激活率是手游特有的一项数据内容。</p>
+<h4 id="激活率"><a href="#激活率" class="headerlink" title="激活率"></a>激活率</h4><ul>
+<li><p>激活、激活率、激活且登录率</p>
+<p>激活：下载安装后，联网登录</p>
+<p>激活率 = 激活量/安装量</p>
+<p>(激活码的)激活率 = 激活量 / 激活码发放量</p>
+<p>(激活码的)激活且登录率 = 激活且登录量 / 激活码发放量</p>
+</li>
+<li><p>激活且登录率应用场景</p>
+<p>当改转化率较低时，考虑玩家登录是否有困难，排除网络、客户端问题，以及服务器维护等，该指标说明玩家对用户的兴趣程度。不同渠道的数据，反应渠道的用户质量</p>
+</li>
+<li><p>转化率漏斗</p>
+<p>游戏运行四个主要目标：拉新、促活、留存、付费转化。提高各个环节的转化率</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/YongRuolan/MdPic/master/blog/%E8%BD%AC%E5%8C%96%E7%8E%87%E6%BC%8F%E6%96%97%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" alt="image"></p>
+<h3 id="留存率"><a href="#留存率" class="headerlink" title="留存率"></a>留存率</h3><p> 新用户在一段时间内再次登录游戏的比例。</p>
+<ul>
+<li><p>日留存率：</p>
+<ul>
+<li>次日留存率</li>
+<li>7日留存率</li>
+<li>30日留存率</li>
+</ul>
+</li>
+<li><p>周留存率：<br>新用户在第一周登陆后第二周再次登录的比例</p>
+</li>
+<li><p>月留存率</p>
+</li>
+<li><p>加权留存率</p>
+<p>某一时间段内（a）的新增用户在若干天后的另一时间段（b）的留存数量除以之前时间段(a)的新增用户总量。</p>
+<p>采用加权留存率的原因是，当人数变化较大时，数据会产生偏差，加权之后数据更稳定。</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/YongRuolan/MdPic/master/blog/%E5%8A%A0%E6%9D%83%E7%95%99%E5%AD%98%E7%8E%87.jpg" alt="image"></p>
+<h3 id="用户付费指标"><a href="#用户付费指标" class="headerlink" title="用户付费指标"></a>用户付费指标</h3><ul>
+<li><p>PUR（Pay User Rate，付费率）</p>
+<p>PUR = 付费人数/活跃人数</p>
+<p>当付费用户的生命周期总价值有一定的保证，提升付费用户比例，是提升公司营收的有效途径</p>
+</li>
+<li><p>ARPPU（Average Revenue per Paying user）</p>
+<p>ARPPU = 付费金额 / 付费人数</p>
+</li>
+<li><p>ARPU（Average Revenue per User）</p>
+<p>ARPU = 付费金额 / 活跃人数</p>
+</li>
+</ul>
+<p>一般来说，高付费率的游戏，ARPPU比较低，综合来看，ARPU从某种程度上衡量游戏的盈利能力。</p>
+<h3 id="导入用户成本"><a href="#导入用户成本" class="headerlink" title="导入用户成本"></a>导入用户成本</h3><ul>
+<li><p>CPC（Cost per Click）</p>
+<p>单个点击用户的成本：</p>
+<p>CPC = 广告投入总额/所投的广告带来的点击用户数</p>
+</li>
+<li><p>CPA（Cost per Action）</p>
+<p>每个激活用户的成本：</p>
+<p>CPA = 广告投入总额/所投的广告带来的激活用户数</p>
+</li>
+<li><p>CPR（Cost per Register）</p>
+<p>平均每个注册用户成本：</p>
+<p>CPR = 广告投入总额/所投的广告带来的注册用户数</p>
+</li>
+<li><p>CPR（Cost per Login）</p>
+<p>平均每个登录用户成本：</p>
+<p>CPR = 广告投入总额/所投的广告带来的登录用户数</p>
+</li>
+</ul>
+<p>根据用户转化漏斗情况：CPC &lt; CPA &lt; CPR &lt; CPL ，各项指标的成本越低，说明效果越好，但最终仍要看用户的留存和付费情况，即RIO（Return On Investment ，投资回报率）</p>
+<h3 id="LTV-Life-Time-Value"><a href="#LTV-Life-Time-Value" class="headerlink" title="LTV(Life Time Value)"></a>LTV(Life Time Value)</h3><p>指每个用户在生命周期内为该游戏创造的收入总计，可以看做是长期累计的ARPU值，用户的生命周期指用户第一次启动游戏应用到最后一次启动游戏应用之间的周期。</p>
+<p>每个用户平均的LTV = 每月ARPU * 用户按月计的平均生命周期</p>
+<p><a href="http://note.youdao.com/noteshare?id=c51c8d81381e9741c30b6919ead954c0&amp;sub=wcp1526023896883753" target="_blank" rel="noopener">==如何计算用户的平均生命周期?==</a></p>
+<p>LTV指用户在游戏中产出的价值，而CPA是指获取一个有效用户的成本，，当CPA &gt; LTV时，可以理解成获取用户的成本大于用户的产出，通过该数据判断市场投放效果，以及是否有必要追加投放或停止投放尽早止损。</p>
+<h3 id="RIO（Return-On-Investment）"><a href="#RIO（Return-On-Investment）" class="headerlink" title="RIO（Return On Investment）"></a>RIO（Return On Investment）</h3><p>投资回报率：投资后所得的收益与成本间的百分比率</p>
+<p>RIO = 利润 / 投资总额 * 100%</p>
+<ul>
+<li>RIO &gt; 0 : 盈利</li>
+<li>RIO = 0 ：盈亏平衡</li>
+<li>RIO &lt; 0 : 亏损</li>
+</ul>
+<p>RIO的八大价值：</p>
+<ol>
+<li>衡量产品的盈亏状态；</li>
+<li>筛选推广渠道，分析每个渠道的流量变现能力；</li>
+<li>实时分析，衡量渠道付费流量获取的边际效应，调整投入力度；</li>
+<li>结合其他数据（新增、流失、留存、付费等）调整游戏，进行流量转化与梳理</li>
+<li>综合分析LTV值，对新生产品进行LTV预测，结合CPX衡量推广预算；或综合同类游戏LTV值，进行估值采样，结合CPX衡量推广预算；</li>
+<li>评估后续推广活动的成功与否；</li>
+<li>评估直接ROI即简介ROI的推广优劣；</li>
+<li>推广数据导向，衡量渠道投入性价比。</li>
+</ol>
+<h2 id="游戏开发各阶段，数据分析的功能"><a href="#游戏开发各阶段，数据分析的功能" class="headerlink" title="游戏开发各阶段，数据分析的功能"></a>游戏开发各阶段，数据分析的功能</h2><h3 id="游戏发行预热期"><a href="#游戏发行预热期" class="headerlink" title="游戏发行预热期"></a>游戏发行预热期</h3><h4 id="预定用户分析"><a href="#预定用户分析" class="headerlink" title="预定用户分析"></a>预定用户分析</h4><ul>
+<li><p>对预定用户进行调研，主要步骤为：</p>
+<ol>
+<li>问卷设计</li>
+<li>问卷投放</li>
+<li>数据处理：去除无意义和逻辑互斥数据</li>
+<li>问卷分析</li>
+<li>数据展示</li>
+<li>报告撰写</li>
+</ol>
+</li>
+<li><p>调研的作用：</p>
+<ol>
+<li>确定宣传渠道</li>
+<li>确定宣传对象</li>
+<li>确定宣传时间</li>
+<li>确定宣传内容</li>
+<li>确定宣传方法</li>
+</ol>
+</li>
+<li><p>数据来源</p>
+<ul>
+<li>用户预定的数据，主要为手机号码和操作平台</li>
+<li>用户预定后参与的调查问卷</li>
+<li>预定用户在本公司其他游戏中的登录和付费数据</li>
+</ul>
+</li>
+<li><p>主要的分析指标</p>
+<ol>
+<li>预订用户情况一览：每日预定量、预定渠道分布、预订用户操作系统分布</li>
+<li>预定用户来源：老用户(本公司游戏类型)、新用户（调研常玩游戏）</li>
+<li>预定用户付费：</li>
+<li>预定用户喜好：</li>
+<li>预定用户人口属性：男女比例、年龄分布等</li>
+<li>预定用户地域分布：</li>
+<li>不同类型用户质量：在游戏开启测试后，根据预定用户登录游戏的日志和付费日志，计算用户留存率、付费率和ARPU等关键指标，判断用户质量。</li>
+</ol>
+</li>
+</ul>
+<h4 id="预定用户转化率预估"><a href="#预定用户转化率预估" class="headerlink" title="预定用户转化率预估"></a>预定用户转化率预估</h4><p>通过历史其他游戏的预定转化率和该游戏的预订用户量来估计预订用户转化率：</p>
+<p>预定用户转化率 = 预定登录游戏 \ 预订用户数量</p>
+<ul>
+<li>分析方法：对比分析、分组分析、交叉分析和相关分析</li>
+<li>数据来源：用户预定的数据和预定用户在本公司其他游戏的登录和付费数据</li>
+<li>分析指标：<ul>
+<li>用户预订时间分布</li>
+<li>预定且登录用户的时间分布</li>
+<li>预定且登录用户的登录时间分布</li>
+</ul>
+</li>
+</ul>
+<h3 id="竞品分析"><a href="#竞品分析" class="headerlink" title="竞品分析"></a>竞品分析</h3><p>分析内容：</p>
+<ul>
+<li>市场宣传、预热活动</li>
+<li>开测表现</li>
+<li>运行活动及版本计划</li>
+<li>数据表现好的原因</li>
+<li>畅销榜同类游戏数据对比</li>
+</ul>
+<p>详细分析：</p>
+<ul>
+<li>测试节点、版本计划、市场活动总览</li>
+<li>在ios平台的收入、下载量和排名</li>
+<li>进入过畅销榜前50名同类游戏总收入、下载量对比</li>
+<li>进入过畅销榜前50名同类游戏总每日收入、下载量对比</li>
+<li>版本更新时间表</li>
+</ul>
+<h3 id="游戏封测期"><a href="#游戏封测期" class="headerlink" title="游戏封测期"></a>游戏封测期</h3><h4 id="问卷调查"><a href="#问卷调查" class="headerlink" title="问卷调查"></a>问卷调查</h4><ul>
+<li>用户调查分析：通过用户调查，分析封测的用户人群属性，这些用户对游戏画面、职业、新手引导、技能、副本、社交功能等内容的体验和评价以及建议</li>
+<li>渠道质量分析</li>
+<li>漏斗分析</li>
+<li>留存率评级：根据封测留存率对产品进行评级</li>
+<li>数据预测：包含公测市场费、活跃用户、收入、利润率和回收成本</li>
+<li>流失分析</li>
+</ul>
+<p>数据来源：问卷系统后台数据库<br><img src="https://raw.githubusercontent.com/YongRuolan/MdPic/master/blog/%E6%B8%B8%E6%88%8F%E5%B0%81%E6%B5%8B%E6%9C%9F%E6%AF%8F%E6%97%A5%E6%B5%8B%E8%AF%95%E7%9B%AE%E7%9A%84%E5%88%87%E5%88%86.jpg" alt="游戏封测期每日测试目的切分"></p>
+<p>可能涉及的详细分析内容：</p>
+<ul>
+<li>调查时间</li>
+<li>调查对象和数量</li>
+<li>用户整体情况</li>
+<li>用户初体验评价</li>
+<li>用户人口属性</li>
+<li>上手难度</li>
+<li>画面与画风</li>
+<li>职业</li>
+<li>新手引导</li>
+<li>地图系统</li>
+<li>设计体验</li>
+<li>技能</li>
+<li>副本</li>
+<li>副本组队机制</li>
+<li>怪物</li>
+<li>PVP</li>
+<li>武器</li>
+<li>装备</li>
+<li>社交功能</li>
+<li>游戏评价与建议</li>
+<li>推荐意愿</li>
+</ul>
+<p>最后总结评论</p>
+<h4 id="渠道用户质量分析"><a href="#渠道用户质量分析" class="headerlink" title="渠道用户质量分析"></a>渠道用户质量分析</h4><h3 id="公测期"><a href="#公测期" class="headerlink" title="公测期"></a>公测期</h3><h4 id="市场分析"><a href="#市场分析" class="headerlink" title="市场分析"></a>市场分析</h4><h4 id="用户分析"><a href="#用户分析" class="headerlink" title="用户分析"></a>用户分析</h4><h4 id="付费分析"><a href="#付费分析" class="headerlink" title="付费分析"></a>付费分析</h4>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/游戏分析/" rel="tag"># 游戏分析</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/26/监督学习中的关键要素/" rel="next" title="监督学习中的关键要素">
+                <i class="fa fa-chevron-left"></i> 监督学习中的关键要素
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">yongrl</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yongrl" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:yongruolan@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据分析的价值"><span class="nav-number">1.</span> <span class="nav-text">数据分析的价值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据分析概述"><span class="nav-number">2.</span> <span class="nav-text">数据分析概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤"><span class="nav-number">2.2.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用数据分析方法："><span class="nav-number">2.3.</span> <span class="nav-text">常用数据分析方法：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#游戏业务相关数据"><span class="nav-number">2.4.</span> <span class="nav-text">游戏业务相关数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏关键数据指标"><span class="nav-number">3.</span> <span class="nav-text">游戏关键数据指标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#转化率"><span class="nav-number">3.1.</span> <span class="nav-text">转化率</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#激活率"><span class="nav-number">3.1.1.</span> <span class="nav-text">激活率</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#留存率"><span class="nav-number">3.2.</span> <span class="nav-text">留存率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用户付费指标"><span class="nav-number">3.3.</span> <span class="nav-text">用户付费指标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导入用户成本"><span class="nav-number">3.4.</span> <span class="nav-text">导入用户成本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LTV-Life-Time-Value"><span class="nav-number">3.5.</span> <span class="nav-text">LTV(Life Time Value)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RIO（Return-On-Investment）"><span class="nav-number">3.6.</span> <span class="nav-text">RIO（Return On Investment）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#游戏开发各阶段，数据分析的功能"><span class="nav-number">4.</span> <span class="nav-text">游戏开发各阶段，数据分析的功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#游戏发行预热期"><span class="nav-number">4.1.</span> <span class="nav-text">游戏发行预热期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#预定用户分析"><span class="nav-number">4.1.1.</span> <span class="nav-text">预定用户分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#预定用户转化率预估"><span class="nav-number">4.1.2.</span> <span class="nav-text">预定用户转化率预估</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#竞品分析"><span class="nav-number">4.2.</span> <span class="nav-text">竞品分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#游戏封测期"><span class="nav-number">4.3.</span> <span class="nav-text">游戏封测期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#问卷调查"><span class="nav-number">4.3.1.</span> <span class="nav-text">问卷调查</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#渠道用户质量分析"><span class="nav-number">4.3.2.</span> <span class="nav-text">渠道用户质量分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#公测期"><span class="nav-number">4.4.</span> <span class="nav-text">公测期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#市场分析"><span class="nav-number">4.4.1.</span> <span class="nav-text">市场分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户分析"><span class="nav-number">4.4.2.</span> <span class="nav-text">用户分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#付费分析"><span class="nav-number">4.4.3.</span> <span class="nav-text">付费分析</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-snowflake-o"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yongrl</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_lines.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+</body>
+</html>
