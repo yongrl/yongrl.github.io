@@ -418,6 +418,41 @@
 </ul>
 <p>注意：多表连接只能通过索引，否则会报错</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---------------------------------------------------------------------------</span><br><span class="line">ValueError                                Traceback (most recent call last)</span><br><span class="line">&lt;ipython-input<span class="number">-35</span><span class="number">-29</span>a230cbe380&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">----&gt; 1 oned_beh_UserCou.join([threed_beh_UserCou.reset_index(),sixd_beh_UserCou.reset_index],how='left',on='user_id')</span><br><span class="line"></span><br><span class="line">/usr/local/lib/python3<span class="number">.5</span>/dist-packages/pandas/core/frame.py <span class="keyword">in</span> join(self, other, on, how, lsuffix, rsuffix, sort)</span><br><span class="line">   <span class="number">5291</span>         <span class="comment"># For SparseDataFrame's benefit</span></span><br><span class="line">   <span class="number">5292</span>         <span class="keyword">return</span> self._join_compat(other, on=on, how=how, lsuffix=lsuffix,</span><br><span class="line">-&gt; 5293                                  rsuffix=rsuffix, sort=sort)</span><br><span class="line">   <span class="number">5294</span> </span><br><span class="line">   <span class="number">5295</span>     <span class="function"><span class="keyword">def</span> <span class="title">_join_compat</span><span class="params">(self, other, on=None, how=<span class="string">'left'</span>, lsuffix=<span class="string">''</span>, rsuffix=<span class="string">''</span>,</span></span></span><br><span class="line"><span class="function"><span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">/usr/local/lib/python3<span class="number">.5</span>/dist-packages/pandas/core/frame.py in _join_compat<span class="params">(self, other, on, how, lsuffix, rsuffix, sort)</span></span></span></span><br><span class="line"><span class="function"><span class="params">   <span class="number">5309</span>         else:</span></span></span><br><span class="line"><span class="function"><span class="params">   <span class="number">5310</span>             if on is not None:</span></span></span><br><span class="line"><span class="function"><span class="params">-&gt; <span class="number">5311</span>                 raise ValueError<span class="params">(<span class="string">'Joining multiple DataFrames only supported'</span></span></span></span></span><br><span class="line"><span class="function"><span class="params"><span class="params">   <span class="number">5312</span>                                  <span class="string">' for joining on index'</span>)</span></span></span></span><br><span class="line"><span class="function"><span class="params">   <span class="number">5313</span> </span></span></span><br><span class="line"><span class="function"><span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">ValueError: Joining multiple DataFrames only supported for joining on index</span></span></span><br></pre></td></tr></table></figure>
+<p>但是当对dataframe进行groupby、reset_index等操作后，此时的index可能并不是我们想要的索引列。可以通过以下函数来重置index：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pandas.DataFrame.reset_index()</span><br><span class="line">pandas.DataFrame.set_index(&quot;&quot;,drop=True)</span><br><span class="line">pandas.Series.reset_index()</span><br></pre></td></tr></table></figure></p>
+<h2 id="merge"><a href="#merge" class="headerlink" title="merge"></a>merge</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataFrame.merge(right, how=&apos;inner&apos;, on=None, left_on=None, right_on=None, left_index=False, right_index=False, sort=False, suffixes=(&apos;_x&apos;, &apos;_y&apos;), copy=True, indicator=False, validate=None)[source]</span><br></pre></td></tr></table></figure>
+<p>merge类似于数据库中的join操作（database-style join），如果两表连接的字段是column,dataframe的index会被省略，如果是索引和索引或者索引和column的链接,最后仍会保留index</p>
+<p>参数</p>
+<ul>
+<li>right:连接的另一个dataframe</li>
+<li>how: 连接方式,可选{‘left’,’right’, ‘outer’, ‘inner’}, 默认值: ‘inner’</li>
+<li>on: 表的连接字段，column name 或者index name,这个字段必须出现在连接的两个dataframe中，如果该参数值为None,并且不是按照index连接，则表的连接字段为两个dataframe的公共字段</li>
+<li>left_on: 左dataframe的连接column或index名，list或者array-like</li>
+<li>right_on: 右dataframe的连接column或index名，list或者array-like</li>
+<li>left_index: 布尔值，默认为False,使用左dataframe的index作为join的字段</li>
+<li>right_index: 同left_index</li>
+<li>sort: 布尔值，默认False,是否按键值排序</li>
+<li>suffixes: 2-length sequence,公共字段别名</li>
+<li>copy: 布尔值，默认True</li>
+<li>indicator: 布尔或者字符串</li>
+<li>validate: 字符串，默认None，检验merge是否为以下形式:”one_to_one”,”one_to_many”,”many_to_one”,”many_to_many”</li>
+</ul>
+<h2 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pandas.concat(objs, axis=0, join=&apos;outer&apos;, join_axes=None, ignore_index=False, keys=None, levels=None, names=None, verify_integrity=False, sort=None, copy=True)</span><br></pre></td></tr></table></figure>
+<p>按某一维度拼接pandas对象</p>
+<p>参数：</p>
+<ul>
+<li>objs:</li>
+<li>axis: {0,1},默认为0</li>
+<li>join: {‘inner’,’outer’},默认为outer,这个参数的意思是如果按行连接，列的处理方式，inner则只保留公共列，outer则列出所有列</li>
+<li>join_axes: </li>
+<li>ignore_index: 布尔值，默认为False,</li>
+<li>key: sequence,默认None</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">df1 = pd.DataFrame([[&apos;a&apos;, 1], [&apos;b&apos;, 2]],columns=[&apos;letter&apos;, &apos;number&apos;])</span><br><span class="line">df3 = pd.DataFrame([[&apos;c&apos;, 3, &apos;cat&apos;], [&apos;d&apos;, 4, &apos;dog&apos;]], columns=[&apos;letter&apos;, &apos;number&apos;, &apos;animal&apos;])</span><br><span class="line">pd.concat([df1, df3], join=&quot;inner&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">letter	number</span><br><span class="line">0	a	1</span><br><span class="line">1	b	2</span><br><span class="line">0	c	3</span><br><span class="line">1	d	4</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pd.concat([df1, df3], join=&quot;outer&quot;,ignore_index=True)</span><br><span class="line">animal	letter	number</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">0	NaN	a	1</span><br><span class="line">1	NaN	b	2</span><br><span class="line">2	cat	c	3</span><br><span class="line">3	dog	d	4</span><br></pre></td></tr></table></figure>
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>merge与join相比，join可以一次进行多个dataframe的连接，而merge一次只能进行两个dataframe, 但merge在连接字段的设置上更灵活，而concat只是进行dataframe的行或列的拼接。</p>
+
           
         
       
@@ -522,7 +557,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
