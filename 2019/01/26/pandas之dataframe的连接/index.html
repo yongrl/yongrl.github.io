@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="yongrl, 雍若兰">
+  <meta name="keywords" content="pandas,join,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="问题在分析数据时，遇到了要处理多个dataframe按照关键词user_id连接的需求，在sql中只要多个表left join on 就可以了，那么在pandas中怎么进行多个dataframe的连接吗？ DataFrame中的表连接方式dataframe主要有三个函数可以用来做表的连接，分别是join、merge、concat，下面分别介绍这三个DataFrame的用法。 join1DataFr">
+<meta name="description" content="问题在分析数据时，遇到了要处理多个dataframe按照关键词user_id连接的需求，在sql中只要多个表left join on 就可以了，那么在pandas中怎么处理呢？ DataFrame中的表连接方式dataframe主要有三个函数可以用来做表的连接，分别是join、merge、concat，下面分别介绍这三个DataFrame的用法。 join1DataFrame.join(other">
+<meta name="keywords" content="pandas,join">
 <meta property="og:type" content="article">
 <meta property="og:title" content="pandas之dataframe的连接">
 <meta property="og:url" content="https://yongrl.github.io/2019/01/26/pandas之dataframe的连接/index.html">
 <meta property="og:site_name" content="yongrl">
-<meta property="og:description" content="问题在分析数据时，遇到了要处理多个dataframe按照关键词user_id连接的需求，在sql中只要多个表left join on 就可以了，那么在pandas中怎么进行多个dataframe的连接吗？ DataFrame中的表连接方式dataframe主要有三个函数可以用来做表的连接，分别是join、merge、concat，下面分别介绍这三个DataFrame的用法。 join1DataFr">
+<meta property="og:description" content="问题在分析数据时，遇到了要处理多个dataframe按照关键词user_id连接的需求，在sql中只要多个表left join on 就可以了，那么在pandas中怎么处理呢？ DataFrame中的表连接方式dataframe主要有三个函数可以用来做表的连接，分别是join、merge、concat，下面分别介绍这三个DataFrame的用法。 join1DataFrame.join(other">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-25T16:15:41.755Z">
+<meta property="og:updated_time" content="2019-01-25T16:33:33.348Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="pandas之dataframe的连接">
-<meta name="twitter:description" content="问题在分析数据时，遇到了要处理多个dataframe按照关键词user_id连接的需求，在sql中只要多个表left join on 就可以了，那么在pandas中怎么进行多个dataframe的连接吗？ DataFrame中的表连接方式dataframe主要有三个函数可以用来做表的连接，分别是join、merge、concat，下面分别介绍这三个DataFrame的用法。 join1DataFr">
+<meta name="twitter:description" content="问题在分析数据时，遇到了要处理多个dataframe按照关键词user_id连接的需求，在sql中只要多个表left join on 就可以了，那么在pandas中怎么处理呢？ DataFrame中的表连接方式dataframe主要有三个函数可以用来做表的连接，分别是join、merge、concat，下面分别介绍这三个DataFrame的用法。 join1DataFrame.join(other">
 
 
 
@@ -322,6 +323,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/python编程/" itemprop="url" rel="index">
+                    <span itemprop="name">python编程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -380,7 +403,7 @@
       
 
       
-        <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在分析数据时，遇到了要处理多个dataframe按照关键词user_id连接的需求，在sql中只要多个表left join on 就可以了，那么在pandas中怎么进行多个dataframe的连接吗？</p>
+        <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在分析数据时，遇到了要处理多个dataframe按照关键词user_id连接的需求，在sql中只要多个表left join on 就可以了，那么在pandas中怎么处理呢？</p>
 <h1 id="DataFrame中的表连接方式"><a href="#DataFrame中的表连接方式" class="headerlink" title="DataFrame中的表连接方式"></a>DataFrame中的表连接方式</h1><p>dataframe主要有三个函数可以用来做表的连接，分别是join、merge、concat，下面分别介绍这三个DataFrame的用法。</p>
 <h2 id="join"><a href="#join" class="headerlink" title="join"></a>join</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataFrame.join(other, on=None, how=&apos;left&apos;, lsuffix=&apos;&apos;, rsuffix=&apos;&apos;, sort=False)</span><br></pre></td></tr></table></figure>
 <p>通过列或者索引join “other” dataframe, 能高效的连接多个dataframe。</p>
@@ -443,6 +466,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/pandas/" rel="tag"># pandas</a>
+          
+            <a href="/tags/join/" rel="tag"># join</a>
+          
+        </div>
       
 
       
@@ -531,7 +562,25 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
             
 
           </nav>
