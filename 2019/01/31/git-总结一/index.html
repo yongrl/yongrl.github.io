@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="yongrl, 雍若兰">
+  <meta name="keywords" content="git,">
 
 
 
@@ -79,13 +79,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="yongrl">
-<meta property="og:url" content="https://yongrl.github.io/index.html">
+<meta name="description" content="来源：git教程 - 廖雪峰的官方网站 git简介git和Linux是同一个爸爸, 爸爸Linus在开始都是手工将世界各地的源代码合并，到2002年Linux发展十年，代码库之大让Linus很难继续通过手工方式管理了，Linus选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。但2005年开发S">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 总结一">
+<meta property="og:url" content="https://yongrl.github.io/2019/01/31/git-总结一/index.html">
 <meta property="og:site_name" content="yongrl">
+<meta property="og:description" content="来源：git教程 - 廖雪峰的官方网站 git简介git和Linux是同一个爸爸, 爸爸Linus在开始都是手工将世界各地的源代码合并，到2002年Linux发展十年，代码库之大让Linus很难继续通过手工方式管理了，Linus选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。但2005年开发S">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/26e9cd27fe0a058667cb938dc1c6fb51/xmlnote/B4759C4725CF4DF2A19BA7A387671B0B/14707">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/26e9cd27fe0a058667cb938dc1c6fb51/xmlnote/8D1E3C93636D4F778F981D0B3DA01748/14709">
+<meta property="og:updated_time" content="2019-01-31T06:39:27.356Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="yongrl">
+<meta name="twitter:title" content="git 总结一">
+<meta name="twitter:description" content="来源：git教程 - 廖雪峰的官方网站 git简介git和Linux是同一个爸爸, 爸爸Linus在开始都是手工将世界各地的源代码合并，到2002年Linux发展十年，代码库之大让Linus很难继续通过手工方式管理了，Linus选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。但2005年开发S">
+<meta name="twitter:image" content="https://note.youdao.com/yws/public/resource/26e9cd27fe0a058667cb938dc1c6fb51/xmlnote/B4759C4725CF4DF2A19BA7A387671B0B/14707">
 
 
 
@@ -115,13 +123,13 @@
 
 
 
-  <link rel="canonical" href="https://yongrl.github.io/">
+  <link rel="canonical" href="https://yongrl.github.io/2019/01/31/git-总结一/">
 
 
 
 
 
-  <title>yongrl</title>
+  <title>git 总结一 | yongrl</title>
   
 
 
@@ -140,8 +148,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -264,9 +271,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -296,9 +303,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/31/git-总结一/" itemprop="url">git 总结一</a></h2>
+          <h2 class="post-title" itemprop="name headline">git 总结一</h2>
         
 
         <div class="post-meta">
@@ -401,9 +406,7 @@
       
 
       
-        
-          
-            <p>来源：<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">git教程 - 廖雪峰的官方网站</a></p>
+        <p>来源：<a href="https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="noopener">git教程 - 廖雪峰的官方网站</a></p>
 <h1 id="git简介"><a href="#git简介" class="headerlink" title="git简介"></a>git简介</h1><p>git和Linux是同一个爸爸, 爸爸Linus在开始都是手工将世界各地的源代码合并，到2002年Linux发展十年，代码库之大让Linus很难继续通过手工方式管理了，Linus选择了一个商业的版本控制系统BitKeeper，BitKeeper的东家BitMover公司出于人道主义精神，授权Linux社区免费使用这个版本控制系统。但2005年开发Samba的Andrew试图破解BitKeeper的协议，被BitMover公司发现了，于是BitMover公司怒了，要收回Linux社区的免费使用权。</p>
 <p>Linus花了两周时间自己用C写了一个分布式版本控制系统，这就是Git！一个月之内，Linux系统的源码已经由Git管理了。</p>
 <h1 id="git-尝试"><a href="#git-尝试" class="headerlink" title="git 尝试"></a>git 尝试</h1><h2 id="git-init-创建版本库"><a href="#git-init-创建版本库" class="headerlink" title="git init 创建版本库"></a>git init 创建版本库</h2><p>版本库又名仓库，英文名repository，你可以简单理解成一个目录，这个目录里面的所有文件都可以被Git管理起来，每个文件的修改、删除，Git都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。</p>
@@ -457,8 +460,6 @@
 <p>Git的版本回退速度非常快，因为Git在内部有个指向当前版本的HEAD指针，当你回退版本的时候，Git仅仅是把HEAD从指向append GPL：</p>
 <p><img src="https://note.youdao.com/yws/public/resource/26e9cd27fe0a058667cb938dc1c6fb51/xmlnote/B4759C4725CF4DF2A19BA7A387671B0B/14707" alt="image"><img src="https://note.youdao.com/yws/public/resource/26e9cd27fe0a058667cb938dc1c6fb51/xmlnote/8D1E3C93636D4F778F981D0B3DA01748/14709" alt="image"></p>
 <h2 id="git-reflog-查看git的历史命令"><a href="#git-reflog-查看git的历史命令" class="headerlink" title="git reflog 查看git的历史命令"></a>git reflog 查看git的历史命令</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ git reflog</span><br><span class="line">e475afc HEAD@&#123;1&#125;: reset: moving to HEAD^</span><br><span class="line">1094adb (HEAD -&gt; master) HEAD@&#123;2&#125;: commit: append GPL</span><br><span class="line">e475afc HEAD@&#123;3&#125;: commit: add distributed</span><br><span class="line">eaadf4e HEAD@&#123;4&#125;: commit (initial): wrote a readme file</span><br></pre></td></tr></table></figure>
-          
-        
       
     </div>
     
@@ -473,444 +474,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yongrl.github.io/2019/01/28/方差、协方差/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yongrl">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yongrl">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/28/方差、协方差/" itemprop="url">方差、协方差、相关系数的理解</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-28T17:38:26+08:00">
-                2019-01-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/数学/" itemprop="url" rel="index">
-                    <span itemprop="name">数学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/git/" rel="tag"># git</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>方差和协方差机器学习中常见的两个概念，公式也几乎是随处可见，但是每见一次都像是初次见面，又去想半天各种公式、概念和意义，所以下定决心整理一下。</p>
-<h1 id="方差和协方差"><a href="#方差和协方差" class="headerlink" title="方差和协方差"></a>方差和协方差</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h3 id="方差"><a href="#方差" class="headerlink" title="方差"></a>方差</h3><p>度量==单个==随机变量的离散程度，公式如下：<br>$$<br>\sigma^2_x = \frac{1}{n-1}\sum_{i=1}^n(x_i-\overline{x})^2<br>$$</p>
-<h3 id="协方差"><a href="#协方差" class="headerlink" title="协方差"></a>协方差</h3><p>度量==两个==随机变量（==变化趋势==）的相似程度，定义如下：<br>$$<br>\sigma(x,y)= \frac{1}{n-1}\sum_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})<br>$$</p>
-<p>$$<br>Cov(X,Y) = E[(X-\mu_x)(Y-\mu_y)]<br>$$</p>
-<p>以上两个公式就可以看出，方差和协方差的定义同宗。</p>
-<h2 id="图解"><a href="#图解" class="headerlink" title="图解"></a>图解</h2><p>那么方差是怎么衡量随机变量的离散程度的呢？协方差又怎么衡量变量的变化趋势的呢？</p>
-<h3 id="方差-1"><a href="#方差-1" class="headerlink" title="方差"></a>方差</h3><p><img src="https://note.youdao.com/yws/public/resource/24dbab982f39bb042bfcce3685f55ab4/xmlnote/B19BC65E517D47A6A7304681CF70400A/14373" alt="方差示意图1">图1</p>
-<p>离散程度具体来说衡量的是随机变量偏离均值的幅度大小，单个数据点x的偏离幅度为x与x均值的距离平方和。</p>
-<p>上图中的右上图和右下图，两个随机变量的均值虽然都为0，但是很明显右下图中随机变量偏离均值的幅度更大，各自的方差为：<br>$$<br>(2<em>(70-0)^2+2</em>(-70-0)^2+(-200-0)^2+(200-0)^2)=99600<br>$$</p>
-<p>$$<br>(2<em>(0.01-0)^2+2</em>(-0.01-0)^2+(-0.02-0)^2+(0.02-0)^2)=0.001<br>$$</p>
-<p>所以右上图的离散变量分布的更紧凑。</p>
-<h3 id="协方差-1"><a href="#协方差-1" class="headerlink" title="协方差"></a>协方差</h3><p>对于变量X、Y，协方差的定义为每个时刻的“X值与其均值之差”乘以“Y值与其均值之差”的均值（其实是求“期望”）。因此，如果x与x的均值差与y与y的均值差的符号相同，则协方差值大于0，符号相反，则协方差值小于0，总结如下：</p>
-<p><img src="https://note.youdao.com/yws/public/resource/24dbab982f39bb042bfcce3685f55ab4/xmlnote/8ACBABCEDD8C41FA8F3E0BAABDE9E874/14395" alt="image">图2<br><img src="https://note.youdao.com/yws/public/resource/24dbab982f39bb042bfcce3685f55ab4/xmlnote/5B27DEFD36794683BD292BE72AEBDAB2/14398" alt="image">图3<br><img src="https://note.youdao.com/yws/public/resource/24dbab982f39bb042bfcce3685f55ab4/xmlnote/0A973244F8D84AD89C30492BED90DE14/14400" alt="image">图4</p>
-<p>在图2、3、4中的区域（1）中，有 X&gt;EX ，Y-EY&gt;0 ，所以(X-EX)(Y-EY)&gt;0；</p>
-<p>在图2、3、4中的区域（2）中，有 X<ex ，y-ey="">0 ，所以(X-EX)(Y-EY)&lt;0；</ex></p>
-<p>在图2、3、4中的区域（3）中，有 X&lt;EX ，Y-EY<0 ，所以(x-ex)(y-ey)="">0；</0></p>
-<p>在图2、3、4中的区域（4）中，有 X&gt;EX ，Y-EY&lt;0 ，所以(X-EX)(Y-EY)&lt;0。</p>
-<p>当X 与Y 正相关时，它们的分布大部分在区域（1）和（3）中，小部分在区域（2）和（4）中，所以平均来说，有E(X-EX)(Y-EY)&gt;0 。</p>
-<p>当 X与 Y负相关时，它们的分布大部分在区域（2）和（4）中，小部分在区域（1）和（3）中，所以平均来说，有(X-EX)(Y-EY)&lt;0 。</p>
-<p>当 X与 Y不相关时，它们在区域（1）和（3）中的分布，与在区域（2）和（4）中的分布几乎一样多，所以平均来说，有(X-EX)(Y-EY)=0 。</p>
-<p>所以，我们可以定义一个表示X, Y 相互关系的数字特征，也就是协方差<br>cov(X, Y) = E(X-EX)(Y-EY)。</p>
-<p>当 cov(X, Y)&gt;0时，表明 X与Y 正相关；</p>
-<p>当 cov(X, Y)&lt;0时，表明X与Y负相关；</p>
-<p>当 cov(X, Y)=0时，表明X与Y不相关。</p>
-<p><img src="https://note.youdao.com/yws/public/resource/24dbab982f39bb042bfcce3685f55ab4/xmlnote/61947160B41842E59289D1206E23755C/14380" alt="image"><br>图5</p>
-<p><img src="https://note.youdao.com/yws/public/resource/24dbab982f39bb042bfcce3685f55ab4/xmlnote/DA4EE9AD8EB54578A3549E2735996BB3/14382" alt="image">图6</p>
-<p>而大多数情况下，变量X，Y的变化趋势不会像图一一样严格的同增大同减小，大多如图5和图6一样，这时只要求期望就可以了。</p>
-<h1 id="相关系数"><a href="#相关系数" class="headerlink" title="相关系数"></a>相关系数</h1><p>由协方差的概念相关系数，其定义如下:<br>$$<br>\rho = \frac{Cov(X,Y)}{\sigma_X\sigma_Y}<br>$$</p>
-<p>就是用X、Y的协方差除以X的标准差和Y的标准差。</p>
-<p>在图一中，情况一和情况二的协方差计算如下：</p>
-<p>情况一<br>$$<br>[(100-0)\times(70-0)+(-100-0)\times(-70-0)+(-200-0)\times(-200-0)…]\div7\approx 15428.57<br>$$<br>情况二：<br>$$<br>[(0.01-0)\times(70-0)+(-0.01-0)\times(-70-0)+(-0.02-0)\times(-200-0)…]\div7\approx 1.542857<br>$$<br>由以上计算可知，除了协方差的正负号表示变量的变化趋势是否一致之外，数值的大小还表示变化相似的程度，而相关系数则是协方差的标准化，两种情况的相关系数如下：</p>
-<p>情况一：<br>$$<br>\rho_1 = 15428.57 \div (130.9307 \times 119.2836) \approx 0.9879<br>$$<br>情况二：<br>$$<br>\rho_2 = 1.542857 \div (0.01309307 \times 119.2836) \approx 0.9879<br>$$</p>
-<p>因此相关系数：</p>
-<p>1、也可以反映两个变量变化时是同向还是反向，如果同向变化就为正，反向变化就为负。</p>
-<p>2、由于它是标准化后的协方差，因此更重要的特性来了：它消除了两个变量变化幅度的影响，而只是单纯反应两个变量每单位变化时的相似程度。</p>
-<h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><p>如何通俗易懂地解释「协方差」与「相关系数」的概念？ - GRAYLAMB的回答 - 知乎<br><a href="https://www.zhihu.com/question/20852004/answer/134902061" target="_blank" rel="noopener">https://www.zhihu.com/question/20852004/answer/134902061</a></p>
-<p><a href="https://blog.csdn.net/northeastsqure/article/details/50163031" target="_blank" rel="noopener">终于明白协方差的意义了</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yongrl.github.io/2019/01/25/pandas-之表的连接操作/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="yongrl">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="yongrl">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/01/25/pandas-之表的连接操作/" itemprop="url">pandas 之表的连接操作</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-25T15:33:06+08:00">
-                2019-01-25
-              </time>
+              <a href="/2019/01/28/方差、协方差/" rel="next" title="方差、协方差、相关系数的理解">
+                <i class="fa fa-chevron-left"></i> 方差、协方差、相关系数的理解
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/python编程/" itemprop="url" rel="index">
-                    <span itemprop="name">python编程</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  
-                </span>
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h1><p>在分析数据时，遇到了要处理多个dataframe按照关键词user_id连接的需求，在sql中只要多个表left join on 就可以了，那么在pandas中怎么操作呢？</p>
-<h1 id="DataFrame中的表连接方式"><a href="#DataFrame中的表连接方式" class="headerlink" title="DataFrame中的表连接方式"></a>DataFrame中的表连接方式</h1><p>dataframe主要有三个函数可以用来做表的连接，分别是join、merge、concat，下面分别介绍这三个DataFrame的用法。</p>
-<h2 id="join"><a href="#join" class="headerlink" title="join"></a>join</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataFrame.join(other, on=None, how=&apos;left&apos;, lsuffix=&apos;&apos;, rsuffix=&apos;&apos;, sort=False)</span><br></pre></td></tr></table></figure>
-<p>通过列或者索引join “other” dataframe, 能高效的连接多个dataframe。</p>
-<p>参数：</p>
-<ul>
-<li>other：一个dataframe，或者是dataframe的list</li>
-<li>on：列或索引名，或者是连接关键词的list</li>
-<li>how：连接方式,可选{‘left’,’right’, ‘outer’, ‘inner’}, 默认值: ‘left’</li>
-<li>lsuffix：左表交叉列的别名</li>
-<li>rsuffix：右表交叉列的别名</li>
-<li>sort：布尔值，是否按照连接关键词排序，默认为False</li>
-</ul>
-<p>注意：多表连接只能通过索引，否则会报错</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---------------------------------------------------------------------------</span><br><span class="line">ValueError                                Traceback (most recent call last)</span><br><span class="line">&lt;ipython-input<span class="number">-35</span><span class="number">-29</span>a230cbe380&gt; <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">----&gt; 1 oned_beh_UserCou.join([threed_beh_UserCou.reset_index(),sixd_beh_UserCou.reset_index],how='left',on='user_id')</span><br><span class="line"></span><br><span class="line">/usr/local/lib/python3<span class="number">.5</span>/dist-packages/pandas/core/frame.py <span class="keyword">in</span> join(self, other, on, how, lsuffix, rsuffix, sort)</span><br><span class="line">   <span class="number">5291</span>         <span class="comment"># For SparseDataFrame's benefit</span></span><br><span class="line">   <span class="number">5292</span>         <span class="keyword">return</span> self._join_compat(other, on=on, how=how, lsuffix=lsuffix,</span><br><span class="line">-&gt; 5293                                  rsuffix=rsuffix, sort=sort)</span><br><span class="line">   <span class="number">5294</span> </span><br><span class="line">   <span class="number">5295</span>     <span class="function"><span class="keyword">def</span> <span class="title">_join_compat</span><span class="params">(self, other, on=None, how=<span class="string">'left'</span>, lsuffix=<span class="string">''</span>, rsuffix=<span class="string">''</span>,</span></span></span><br><span class="line"><span class="function"><span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">/usr/local/lib/python3<span class="number">.5</span>/dist-packages/pandas/core/frame.py in _join_compat<span class="params">(self, other, on, how, lsuffix, rsuffix, sort)</span></span></span></span><br><span class="line"><span class="function"><span class="params">   <span class="number">5309</span>         else:</span></span></span><br><span class="line"><span class="function"><span class="params">   <span class="number">5310</span>             if on is not None:</span></span></span><br><span class="line"><span class="function"><span class="params">-&gt; <span class="number">5311</span>                 raise ValueError<span class="params">(<span class="string">'Joining multiple DataFrames only supported'</span></span></span></span></span><br><span class="line"><span class="function"><span class="params"><span class="params">   <span class="number">5312</span>                                  <span class="string">' for joining on index'</span>)</span></span></span></span><br><span class="line"><span class="function"><span class="params">   <span class="number">5313</span> </span></span></span><br><span class="line"><span class="function"><span class="params"></span></span></span><br><span class="line"><span class="function"><span class="params">ValueError: Joining multiple DataFrames only supported for joining on index</span></span></span><br></pre></td></tr></table></figure>
-<p>但是当对dataframe进行groupby、reset_index等操作后，此时的index可能并不是我们想要的索引列。可以通过以下函数来重置index：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pandas.DataFrame.reset_index()</span><br><span class="line">pandas.DataFrame.set_index(&quot;&quot;,drop=True)</span><br><span class="line">pandas.Series.reset_index()</span><br></pre></td></tr></table></figure></p>
-<h2 id="merge"><a href="#merge" class="headerlink" title="merge"></a>merge</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DataFrame.merge(right, how=&apos;inner&apos;, on=None, left_on=None, right_on=None, left_index=False, right_index=False, sort=False, suffixes=(&apos;_x&apos;, &apos;_y&apos;), copy=True, indicator=False, validate=None)[source]</span><br></pre></td></tr></table></figure>
-<p>merge类似于数据库中的join操作（database-style join），如果两表连接的字段是column,dataframe的index会被省略，如果是索引和索引或者索引和column的链接,最后仍会保留index</p>
-<p>参数</p>
-<ul>
-<li>right:连接的另一个dataframe</li>
-<li>how: 连接方式,可选{‘left’,’right’, ‘outer’, ‘inner’}, 默认值: ‘inner’</li>
-<li>on: 表的连接字段，column name 或者index name,这个字段必须出现在连接的两个dataframe中，如果该参数值为None,并且不是按照index连接，则表的连接字段为两个dataframe的公共字段</li>
-<li>left_on: 左dataframe的连接column或index名，list或者array-like</li>
-<li>right_on: 右dataframe的连接column或index名，list或者array-like</li>
-<li>left_index: 布尔值，默认为False,使用左dataframe的index作为join的字段</li>
-<li>right_index: 同left_index</li>
-<li>sort: 布尔值，默认False,是否按键值排序</li>
-<li>suffixes: 2-length sequence,公共字段别名</li>
-<li>copy: 布尔值，默认True</li>
-<li>indicator: 布尔或者字符串</li>
-<li>validate: 字符串，默认None，检验merge是否为以下形式:”one_to_one”,”one_to_many”,”many_to_one”,”many_to_many”</li>
-</ul>
-<h2 id="concat"><a href="#concat" class="headerlink" title="concat"></a>concat</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pandas.concat(objs, axis=0, join=&apos;outer&apos;, join_axes=None, ignore_index=False, keys=None, levels=None, names=None, verify_integrity=False, sort=None, copy=True)</span><br></pre></td></tr></table></figure>
-<p>按某一维度拼接pandas对象</p>
-<p>参数：</p>
-<ul>
-<li>objs:</li>
-<li>axis: {0,1},默认为0</li>
-<li>join: {‘inner’,’outer’},默认为outer,这个参数的意思是如果按行连接，列的处理方式，inner则只保留公共列，outer则列出所有列</li>
-<li>join_axes: </li>
-<li>ignore_index: 布尔值，默认为False,</li>
-<li>key: sequence,默认None</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">df1 = pd.DataFrame([[&apos;a&apos;, 1], [&apos;b&apos;, 2]],columns=[&apos;letter&apos;, &apos;number&apos;])</span><br><span class="line">df3 = pd.DataFrame([[&apos;c&apos;, 3, &apos;cat&apos;], [&apos;d&apos;, 4, &apos;dog&apos;]], columns=[&apos;letter&apos;, &apos;number&apos;, &apos;animal&apos;])</span><br><span class="line">pd.concat([df1, df3], join=&quot;inner&quot;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">letter	number</span><br><span class="line">0	a	1</span><br><span class="line">1	b	2</span><br><span class="line">0	c	3</span><br><span class="line">1	d	4</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pd.concat([df1, df3], join=&quot;outer&quot;,ignore_index=True)</span><br><span class="line">animal	letter	number</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">0	NaN	a	1</span><br><span class="line">1	NaN	b	2</span><br><span class="line">2	cat	c	3</span><br><span class="line">3	dog	d	4</span><br></pre></td></tr></table></figure>
-<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>merge与join相比，join可以一次进行多个dataframe的连接，而merge一次只能进行两个dataframe, 但merge在连接字段的设置上更灵活，而concat只是进行dataframe的行或列的拼接。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -920,10 +513,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -931,6 +525,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -953,8 +551,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1030,6 +637,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git简介"><span class="nav-number">1.</span> <span class="nav-text">git简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git-尝试"><span class="nav-number">2.</span> <span class="nav-text">git 尝试</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-init-创建版本库"><span class="nav-number">2.1.</span> <span class="nav-text">git init 创建版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-add-、git-commit添加文件到版本库"><span class="nav-number">2.2.</span> <span class="nav-text">git add 、git commit添加文件到版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-status-查看仓库当前状态"><span class="nav-number">2.3.</span> <span class="nav-text">git status 查看仓库当前状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-diff-查看文件修改内容"><span class="nav-number">2.4.</span> <span class="nav-text">git diff 查看文件修改内容</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#版本管理"><span class="nav-number">3.</span> <span class="nav-text">版本管理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#git-log-查看历史记录"><span class="nav-number">3.1.</span> <span class="nav-text">git log 查看历史记录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-reset-版本回退"><span class="nav-number">3.2.</span> <span class="nav-text">git reset 版本回退</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git-reflog-查看git的历史命令"><span class="nav-number">3.3.</span> <span class="nav-text">git reflog 查看git的历史命令</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1179,6 +802,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
