@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="yongrl, 雍若兰">
+  <meta name="keywords" content="sklearn,">
 
 
 
@@ -79,14 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://yongrl.github.io/tags/index.html">
+<meta name="description" content="当我们想要直接的查看某个算法在数据上的作用时，如果立即在我们的目标数据上做实验，需要做很多的数据预处理工作，甚至很多预备工作是针对该算法做的，经过千辛万苦之后发现这个算法和我们预期的不一样，那么就造成了资源的浪费，sklearn中有一些方法可以直接生成简单的各种数据，帮助我们对新的算法尽快上手，这篇主要总结sklearn中自带的数据及以及样本生成方法。 sklearn dataset mindma">
+<meta name="keywords" content="sklearn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sklearn之样本数据">
+<meta property="og:url" content="https://yongrl.github.io/2019/02/12/sklearn之样本数据/index.html">
 <meta property="og:site_name" content="yongrl">
+<meta property="og:description" content="当我们想要直接的查看某个算法在数据上的作用时，如果立即在我们的目标数据上做实验，需要做很多的数据预处理工作，甚至很多预备工作是针对该算法做的，经过千辛万苦之后发现这个算法和我们预期的不一样，那么就造成了资源的浪费，sklearn中有一些方法可以直接生成简单的各种数据，帮助我们对新的算法尽快上手，这篇主要总结sklearn中自带的数据及以及样本生成方法。 sklearn dataset mindma">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-24T09:55:03.608Z">
+<meta property="og:updated_time" content="2019-02-12T06:11:20.544Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="sklearn之样本数据">
+<meta name="twitter:description" content="当我们想要直接的查看某个算法在数据上的作用时，如果立即在我们的目标数据上做实验，需要做很多的数据预处理工作，甚至很多预备工作是针对该算法做的，经过千辛万苦之后发现这个算法和我们预期的不一样，那么就造成了资源的浪费，sklearn中有一些方法可以直接生成简单的各种数据，帮助我们对新的算法尽快上手，这篇主要总结sklearn中自带的数据及以及样本生成方法。 sklearn dataset mindma">
 
 
 
@@ -116,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://yongrl.github.io/tags/">
+  <link rel="canonical" href="https://yongrl.github.io/2019/02/12/sklearn之样本数据/">
 
 
 
 
 
-  <title>tags | yongrl</title>
+  <title>sklearn之样本数据 | yongrl</title>
   
 
 
@@ -267,40 +271,198 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://yongrl.github.io/2019/02/12/sklearn之样本数据/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="yongrl">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="yongrl">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h2 class="post-title" itemprop="name headline">tags</h2>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                7 tags in total
+          <h2 class="post-title" itemprop="name headline">sklearn之样本数据</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-12T14:08:21+08:00">
+                2019-02-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/工具/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  
+                </span>
+              
             </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/git/" style="font-size: 30px; color: #111">git</a> <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a> <a href="/tags/join/" style="font-size: 12px; color: #ccc">join</a> <a href="/tags/next/" style="font-size: 12px; color: #ccc">next</a> <a href="/tags/pandas/" style="font-size: 12px; color: #ccc">pandas</a> <a href="/tags/sklearn/" style="font-size: 12px; color: #ccc">sklearn</a> <a href="/tags/方差、协方差/" style="font-size: 12px; color: #ccc">方差、协方差</a>
-            </div>
-          </div>
-        
-      </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>当我们想要直接的查看某个算法在数据上的作用时，如果立即在我们的目标数据上做实验，需要做很多的数据预处理工作，甚至很多预备工作是针对该算法做的，经过千辛万苦之后发现这个算法和我们预期的不一样，那么就造成了资源的浪费，sklearn中有一些方法可以直接生成简单的各种数据，帮助我们对新的算法尽快上手，这篇主要总结sklearn中自带的数据及以及样本生成方法。</p>
+<p><a href="http://note.youdao.com/noteshare?id=317552a5b94453f13f0437e98d4ac9e3&amp;sub=A19B642B07154923A6A8FFC8784A7401" target="_blank" rel="noopener">sklearn dataset mindmap</a></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/sklearn/" rel="tag"># sklearn</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/01/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
